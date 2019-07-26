@@ -1,0 +1,31 @@
+{% extends 'shared/layout.html' %}
+
+{% block conteudo %}
+<h1> Ideias Malucas - MasterTech  </h1>
+
+<form action="/" method="post">
+    {% csrf_token %}<!-- requisição na solicitação para a base -->
+<label>Nome</label>
+<input type="text" name="nome">
+
+<label>Sobrenome</label>
+<input type="text" name="Sobrenome">
+
+<label>E-mail</label>
+<input type="email" name="E-mail">
+
+<label>Gênero</label>
+<select name="genero">
+    <option value=" ">Selecione</option>
+    <option value="Feminino">Feminino</option>
+    <option value="Masculino">Masculino</option>
+    <option value="Outros">Outros</option>
+</select>
+
+<input type="submit" valeu="Cadastrar">
+</form>
+
+{% endblock %}
+
+
+   
